@@ -107,7 +107,10 @@ public class CardService extends HostApduService {
         // send the loyalty card account number, followed by a SELECT_OK status trailer (0x9000).
         if (Arrays.equals(SELECT_APDU, commandApdu)) {
             return SELECT_OK_SW;
-        } else {
+        }
+
+        // ********************************************* Begin added by Adam Ryklief
+        else {
             String receivedNumber = "";
             try {
                 receivedNumber = new String(commandApdu, "ISO-8859-1");
@@ -138,10 +141,13 @@ public class CardService extends HostApduService {
             Log.i(TAG, "concat:" + concat);
 
             return concat;
+            // ********************************************* End added by Adam Ryklief
+
         }
     }
     // END_INCLUDE(processCommandApdu)
 
+    // ********************************************* Begin added by Adam Ryklief
     private static SecretKeySpec getSecretKeySpec() {
         byte[] hashedSecretKey = null;
         try {
@@ -175,6 +181,7 @@ public class CardService extends HostApduService {
         }
         return encryptedBytes;
     }
+    // ********************************************* End added by Adam Ryklief
 
     /**
      * Build APDU for SELECT AID command. This command indicates which service a reader is
