@@ -1,0 +1,4 @@
+#Thu Apr 11 15:48:05 BST 2019
+base.0=C\:\\zRepos\\android-CardEmulation\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex

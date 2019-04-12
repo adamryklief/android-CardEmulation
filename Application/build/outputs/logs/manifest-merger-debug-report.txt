@@ -1,0 +1,129 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:1-61:12
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:1-61:12
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:1-61:12
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\17e15ea6afbb554dd658671cb049d7d7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\a0a64d6a3d1b55e0fdc425a40d9dcf3e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\60ceb127644e79dba09e113e54fb49f4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\c3129be9c6055b964d378b2e3b0514d7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1bc37e97fbe41dfa7084a7cad309aef1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\70f8d359ff996d09f08c0a6474ad695b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\1349347590d692fa3466cc6957fadf8e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6d4dda6c69d730696798081cad88098d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\296aff1cc4197861b81e580b5f8af797\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\64c1a8743f62ca82971cc87476590553\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9d6b54327c8ea0c12cefdab0489b6f9d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\67f1e0535040a8bd3463ba08ebb64dcd\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:1-61:12
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:1-61:12
+	package
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:19:5-48
+	android:versionName
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:21:5-30
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:18:11-69
+	android:versionCode
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:20:5-28
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+uses-feature#android.hardware.nfc.hce
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:25:5-85
+	android:required
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:25:59-82
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:25:19-58
+uses-permission#android.permission.NFC
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:26:5-62
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:26:22-59
+application
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:28:5-58:19
+	android:label
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:29:9-41
+	android:icon
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:30:9-45
+	android:allowBackup
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:28:18-44
+	android:theme
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:31:9-40
+activity#com.example.android.cardemulation.MainActivity
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:34:9-40:20
+	android:label
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:35:19-51
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:34:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:38:27-74
+service#com.example.android.cardemulation.CardService
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:44:9-56:19
+	android:exported
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:45:18-41
+	android:permission
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:46:18-74
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:44:18-45
+intent-filter#action:name:android.nfc.cardemulation.action.HOST_APDU_SERVICE+category:name:android.intent.category.DEFAULT
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:48:13-51:29
+action#android.nfc.cardemulation.action.HOST_APDU_SERVICE
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:49:17-92
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:49:25-90
+category#android.intent.category.DEFAULT
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:50:17-75
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:50:27-73
+meta-data#android.nfc.cardemulation.host_apdu_service
+ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:54:13-55:58
+	android:resource
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:55:24-56
+	android:name
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml:54:24-82
+uses-sdk
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\17e15ea6afbb554dd658671cb049d7d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v13-27.0.2.aar\17e15ea6afbb554dd658671cb049d7d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\a0a64d6a3d1b55e0fdc425a40d9dcf3e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-v4-27.0.2.aar\a0a64d6a3d1b55e0fdc425a40d9dcf3e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\60ceb127644e79dba09e113e54fb49f4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.0.2.aar\60ceb127644e79dba09e113e54fb49f4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\c3129be9c6055b964d378b2e3b0514d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.0.2.aar\c3129be9c6055b964d378b2e3b0514d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1bc37e97fbe41dfa7084a7cad309aef1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.0.2.aar\1bc37e97fbe41dfa7084a7cad309aef1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\70f8d359ff996d09f08c0a6474ad695b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-fragment-27.0.2.aar\70f8d359ff996d09f08c0a6474ad695b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\1349347590d692fa3466cc6957fadf8e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.0.2.aar\1349347590d692fa3466cc6957fadf8e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6d4dda6c69d730696798081cad88098d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.0.2.aar\6d4dda6c69d730696798081cad88098d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\296aff1cc4197861b81e580b5f8af797\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.0.2.aar\296aff1cc4197861b81e580b5f8af797\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\64c1a8743f62ca82971cc87476590553\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.0.2.aar\64c1a8743f62ca82971cc87476590553\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9d6b54327c8ea0c12cefdab0489b6f9d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\support-compat-27.0.2.aar\9d6b54327c8ea0c12cefdab0489b6f9d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\67f1e0535040a8bd3463ba08ebb64dcd\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] C:\Users\Adam\.gradle\caches\transforms-1\files-1.1\runtime-1.0.3.aar\67f1e0535040a8bd3463ba08ebb64dcd\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		ADDED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml
+		INJECTED from C:\zRepos\android-CardEmulation\Application\src\main\AndroidManifest.xml

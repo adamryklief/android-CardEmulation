@@ -48,12 +48,15 @@ public class MainActivity extends SampleActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState == null) {
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            CardEmulationFragment fragment = new CardEmulationFragment();
-            transaction.replace(R.id.sample_content_fragment, fragment);
-            transaction.commit();
-        }
+        ViewAnimator output = (ViewAnimator) findViewById(R.id.sample_output);
+        output.setDisplayedChild(1);
+
+//        if (savedInstanceState == null) {
+//            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+//            CardEmulationFragment fragment = new CardEmulationFragment();
+//            transaction.replace(R.id.sample_content_fragment, fragment);
+//            transaction.commit();
+//        }
     }
 
     @Override

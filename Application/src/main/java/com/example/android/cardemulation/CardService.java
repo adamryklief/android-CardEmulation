@@ -20,7 +20,16 @@ import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
 import com.example.android.common.logger.Log;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
+
+import javax.crypto.Cipher;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * This is a sample APDU Service which demonstrates how to interface with the card emulation support
@@ -40,8 +49,8 @@ import java.util.Arrays;
  */
 public class CardService extends HostApduService {
     private static final String TAG = "CardService";
-    // AID for our loyalty card service.
-    private static final String SAMPLE_LOYALTY_CARD_AID = "F222222222";
+    // AID for snart card service.
+    private static final String SMART_CARD_AID = "F222222222";
     // ISO-DEP command HEADER for selecting an AID.
     // Format: [Class | Instruction | Parameter 1 | Parameter 2]
     private static final String SELECT_APDU_HEADER = "00A40400";
@@ -49,7 +58,16 @@ public class CardService extends HostApduService {
     private static final byte[] SELECT_OK_SW = HexStringToByteArray("9000");
     // "UNKNOWN" status word sent in response to invalid APDU command (0x0000)
     private static final byte[] UNKNOWN_CMD_SW = HexStringToByteArray("0000");
-    private static final byte[] SELECT_APDU = BuildSelectApdu(SAMPLE_LOYALTY_CARD_AID);
+    private static final byte[] SELECT_APDU = BuildSelectApdu(SMART_CARD_AID);
+
+    private static final String ROOM_ID = "1001";
+    private static final String SECRET_KEY = "123safww345";
+    private static Cipher cipher = getCipher();
+    private static SecretKeySpec secretKeySpec = getSecretKeySpec();
+
+
+    private static final int id = 1001;
+    private static Integer rand;
 
     /**
      * Called if the connection to the NFC card is lost, in order to let the application know the
@@ -84,18 +102,79 @@ public class CardService extends HostApduService {
     @Override
     public byte[] processCommandApdu(byte[] commandApdu, Bundle extras) {
         Log.i(TAG, "Received APDU: " + ByteArrayToHexString(commandApdu));
+        byte[] encryptedBytes = null;
         // If the APDU matches the SELECT AID command for this service,
         // send the loyalty card account number, followed by a SELECT_OK status trailer (0x9000).
         if (Arrays.equals(SELECT_APDU, commandApdu)) {
-            String account = AccountStorage.GetAccount(this);
-            byte[] accountBytes = account.getBytes();
-            Log.i(TAG, "Sending account number: " + account);
-            return ConcatArrays(accountBytes, SELECT_OK_SW);
+            return SELECT_OK_SW;
         } else {
-            return UNKNOWN_CMD_SW;
+            String receivedNumber = "";
+            try {
+                receivedNumber = new String(commandApdu, "ISO-8859-1");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+                return null;
+            }
+            Log.i(TAG, "Received number:" + receivedNumber);
+            String payload = ROOM_ID.concat(".").concat(receivedNumber);
+
+            byte[] plainTextByte = new byte[0];
+            try {
+                plainTextByte = payload.getBytes("ISO-8859-1");
+                Log.i(TAG, "payload.getBytes: " + plainTextByte);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            encryptedBytes = encrypt(plainTextByte, secretKeySpec);
+
+            try {
+                String encryptedPayload = new String(encryptedBytes, "ISO-8859-1");
+                Log.i(TAG, "Encrypted payload:" + encryptedPayload);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+
+            byte[] concat = ConcatArrays(encryptedBytes, SELECT_OK_SW);
+            Log.i(TAG, "concat:" + concat);
+
+            return concat;
         }
     }
     // END_INCLUDE(processCommandApdu)
+
+    private static SecretKeySpec getSecretKeySpec() {
+        byte[] hashedSecretKey = null;
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            hashedSecretKey = digest.digest(SECRET_KEY.getBytes(StandardCharsets.ISO_8859_1));
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return new SecretKeySpec(hashedSecretKey, "AES");
+    }
+
+    private static Cipher getCipher() {
+        Cipher cipher = null;
+        try {
+            cipher = Cipher.getInstance("AES");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        }
+        return cipher;
+    }
+
+    private static byte[] encrypt(byte[] plainTextByte, SecretKey secretKey) {
+        byte[] encryptedBytes = null;
+        try {
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
+            encryptedBytes = cipher.doFinal(plainTextByte);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return encryptedBytes;
+    }
 
     /**
      * Build APDU for SELECT AID command. This command indicates which service a reader is
@@ -169,5 +248,9 @@ public class CardService extends HostApduService {
             offset += array.length;
         }
         return result;
+    }
+
+    private int fromByteArray(byte[] bytes) {
+        return bytes[0] << 24 | (bytes[1] & 0xFF) << 16 | (bytes[2] & 0xFF) << 8 | (bytes[3] & 0xFF);
     }
 }
